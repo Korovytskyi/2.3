@@ -46,23 +46,31 @@ Vector3D::operator string() const
 Vector3D& Vector3D::operator ++ ()
 {
 	x++;
+	y++;
+	z++;
 	return *this;
 }
 Vector3D& Vector3D::operator -- ()
 {
 	x--;
+	y++;
+	z++;
 	return *this;
 }
 Vector3D Vector3D::operator ++ (int)
 {
 	Vector3D t(*this);
+	x++;
 	y++;
+	z++;
 	return t;
 }
 Vector3D Vector3D::operator -- (int)
 {
 	Vector3D t(*this);
+	x--;
 	y--;
+	z--;
 	return t;
 }
 
@@ -79,7 +87,7 @@ void Vector3D::isEqual() const
 {
 	cout << "porivnana vectoriv" << endl;
 	if (x == y == z)
-		cout << "x = ó ; y= z ; x=z" << endl;
+		cout << "x = Ã³ ; y= z ; x=z" << endl;
 	if (x == y && x != z)
 		cout << " x = y ; y != z ; x != z " << endl;
 	if (x == z && x != y)
@@ -87,7 +95,7 @@ void Vector3D::isEqual() const
 	if (y == z && y != x)
 		cout << " y = z ; x != y ; x != z " << endl;
 	if (x != y && x != z)
-		cout << " x != ó ; z != y ; x != z " << endl;
+		cout << " x != Ã³ ; z != y ; x != z " << endl;
 	cout << "==================================================================================================" << endl;
 }
 void Vector3D::isEqual2() const
@@ -101,22 +109,22 @@ void Vector3D::isEqual2() const
 	cout << "dovzhyna yz = " << v << endl;
 	cout << "dovzhyna zx = " << b << endl;
 	if (c > v && v > b)
-		cout << "xó > yz > zx" << endl;
+		cout << "xÃ³ > yz > zx" << endl;
 	if (c < v && v < b)
-		cout << "xó < yz < zx" << endl;
+		cout << "xÃ³ < yz < zx" << endl;
 	if (c > v && v < b)
-		cout << "xó > yz < zx" << endl;
+		cout << "xÃ³ > yz < zx" << endl;
 	if (c < v && v > b)
-		cout << "xó < yz > zx" << endl;
+		cout << "xÃ³ < yz > zx" << endl;
 	if (c == v && v == b)
-		cout << "xó = yz = zx" << endl;
+		cout << "xÃ³ = yz = zx" << endl;
 	if (c > v && v == b)
-		cout << "xó < yz = zx" << endl;
+		cout << "xÃ³ < yz = zx" << endl;
 	if (c < v && v == b)
-		cout << "xó < yz = zx" << endl;
+		cout << "xÃ³ < yz = zx" << endl;
 	if (c == v && v > b)
-		cout << "xó = yz > zx" << endl;
+		cout << "xÃ³ = yz > zx" << endl;
 	if (c == v && v < b)
-		cout << "xó = yz < zx" << endl;
+		cout << "xÃ³ = yz < zx" << endl;
 	cout << "==================================================================================================" << endl;
 }
